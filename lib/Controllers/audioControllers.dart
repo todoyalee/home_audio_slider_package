@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
@@ -104,8 +103,8 @@ class AudioController extends GetxController {
     });
 
     audioPlayer.sequenceStateStream.listen((sequenceState) {
-      if (sequenceState?.currentSource?.tag is MediaItem) {
-        currentMediaItem.value = sequenceState?.currentSource?.tag as MediaItem;
+      if (sequenceState.currentSource?.tag is MediaItem) {
+        currentMediaItem.value = sequenceState.currentSource?.tag as MediaItem;
       }
     });
   }
